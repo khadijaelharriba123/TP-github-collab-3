@@ -1,5 +1,6 @@
 name: CI
 
+<<<<<<< HEAD
 on:
   push:
     branches: [ main ]
@@ -15,3 +16,24 @@ jobs:
 
       - name: Say Hello
         run: echo "Workflow works!"
+=======
+
+on:
+ push:
+  branches: ["*"]
+ pull_request:
+  branches: [main]
+
+
+jobs:
+ test:
+  runs-on: ubuntu-latest
+
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-python@v5
+  with:
+   python-version: "3.12"
+- run: pip install-r requirements.txt
+- run: pytest--cov=src tests/
+>>>>>>> c685daa76e6055ed137d8e77d5c3d973a5b1b8df
