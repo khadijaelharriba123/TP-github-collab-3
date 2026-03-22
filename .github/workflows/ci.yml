@@ -1,22 +1,5 @@
 name: CI
 
-<<<<<<< HEAD
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Say Hello
-        run: echo "Workflow works!"
-=======
 
 on:
  push:
@@ -36,4 +19,3 @@ steps:
    python-version: "3.12"
 - run: pip install-r requirements.txt
 - run: pytest--cov=src tests/
->>>>>>> c685daa76e6055ed137d8e77d5c3d973a5b1b8df
